@@ -26,3 +26,13 @@ if (document.querySelector("body").getAttribute("data-my-spy")=="scroll"){
     }
   };
 }
+
+/*============================================================
+ LIGHT DARK TEXT
+==============================================================*/
+const modeSwitch = body.querySelector(".toggle-switch");
+
+
+modeSwitch.addEventListener("click" , () =>{
+    body.classList.toggle("dark");
+});

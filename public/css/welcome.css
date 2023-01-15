@@ -2,6 +2,7 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap'); */
 
 :root {
+    --time-transition:2;
     --primary-color: #4D77FF;
     --light-color: #f7f7f7;
     --title-text-color: #21252f;
@@ -28,6 +29,7 @@ body {
     line-height: 1.7;
     color: var(--body-text-color);
 }
+
 
 h1,h2,h3,h4,h5,h6,
 .display-4 {
@@ -59,7 +61,6 @@ img {
 .section2-bg{
     background-color: var(--section2-bg-color);
 }
-
 
 .logo {
     width: 160px;
@@ -170,8 +171,8 @@ img {
 }
 
 section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 .card-effect {
@@ -363,8 +364,59 @@ section {
     margin-right: 5px;
     font-size: 20pt;
 }
+/*============================ DARK LIGHT =======================================*/
+.theme .sun-moon {
+    height: 50px;
+    width: 60px;
+}
+.theme .text,
+.theme .icon {
+    color: var(--primary-color);
+    transition: var(--time-transition);
+}
 
 
+.theme .toggle-switch {
+    position: absolute;
+    margin-top: -25px;
+    right: 0;
+    margin-right: 5px;
+    
+    min-width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.toggle-switch .switch {
+    position: relative;
+    height: 22px;
+    width: 40px;
+    border-radius: 25px;
+    background-color: var(--primary-color);
+    transition: var(--time-transition);
+}
+
+.switch::before {
+    content: '';
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    background-color: var(--light-color);
+    transition: var(--time-transition);
+}
+
+.dark .switch::before {
+    left: 20px;
+    transition: var(--time-transition);
+}
+/*============================ END DARK LIGHT =======================================*/
 
 /*========================================================================================
  MEDIA QUERY
